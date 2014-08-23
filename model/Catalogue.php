@@ -23,5 +23,11 @@ class Catalogue extends Application{
         
         return $this->db->fetchAll($sql);
     }
+    
+    public function getProduct($id){
+        $sql = "SELECT * FROM `{$this->_table_2}`WHERE `id`='".$this->db->escape($id)."'";
+        
+        return $this->db->fetchOne($sql);
+    }
 }
 

@@ -8,5 +8,8 @@ class Business extends Application{
         return $this->db->fetchOne($sql);
     }
     
-    //public function get
+    public function getVatRate(){
+        $business = $this->getBusiness();
+        return $business['vat_rate'];
+    }
 }
