@@ -1,6 +1,5 @@
 
-<?php 
-
+<?php
 require_once('inc/autoload.php');
 require_once('controller/Core.php');
 //require_once('classes/Core.php');
