@@ -70,19 +70,22 @@
                 $label = "Add to Basket";
             }
             //$out  = "<a href=\"#\" class=\"add_to_basket";
-            /*$out = "<a href=\"#\" class=\"add_to_basket";
+            $out = "<a href=\"#\" class=\"add_to_basket";
             $out .= $id == 0 ? " red" : null;
             $out .= "\" rel=\"";
             $out .= $sees_id."_".$id;
-            $out .= "\">{$label}</a>";*/
+            $out .= "\">{$label}</a>";
             
-            $out = "<a href=\"#\" class=\"add_basket";
+            /*$out = "<a href=\"#\" class=\"add_basket";
             $out .= $id == 0 ? " red" : null;
             $out .= "\" rel=\"";
             $out .= $sees_id."_".$id . "\">";
             $out .= $label;
-            $out .= "</a>";
+            $out .= "</a>";*/
             //echo $out;
+            //echo '<script type="text/javascript">
+                        //alert("poooooooo");
+                  //</script>';
             return $out;
             
         }
@@ -94,13 +97,16 @@
         }
         
         public static function removeButton($id = null){
+            //echo $id;
             if(!empty($id)){
                 if(isset($_SESSION['basket']['id'])){
                     $out = "<a href=\"#\" class=\"remove_basket red";
                     $out .="\" rel=\"{$id}\">Remove</a>";
+                    echo $out;
                     return $out;
                 }
             }
+            //else {echo $id;}
         }
     }
 ?>
