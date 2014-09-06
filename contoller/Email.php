@@ -25,7 +25,53 @@ class Email{
         
         
         
-    
+    public function process($case = null, $array = null) {
+	
+		if (!empty($case)) {
+		
+			switch($case) {
+				
+				case 1:
+				
+				// add url to the array
+				$link  = "<a href=\"".SITE_URL."?page=activate&code=";
+				$link .= $array['hash'];
+				$link .= "\">";
+				$link .= SITE_URL."?page=activate&code=";
+				$link .= $array['hash'];
+				$link .= "</a>";
+				$array['link'] = $link;
+				
+				$this->objMailer->Subject = "Activate your account";
+				
+				$this->objMailer->MsgHTML($this->fetchEmail($case, $array));
+				$this->objMailer->AddAddress(
+					$array['email'], 
+					$array['first_name'].' '.$array['last_name']
+				);
+				
+				break;
+				
+			}
+			
+			
+			// send email
+			if ($this->objMailer->Send()) {
+				$this->objMailer->ClearAddresses();
+                                
+				return true;
+			}
+			//return false;
+			
+		
+		}else{
+                    $file = '/var/www/Com_shopping/peoplex.txt';
+                    $cont = "Email send: case 0";
+                                
+                    file_put_contents($file, $cont);
+                }
+	
+	}
 }
 ?>
 
