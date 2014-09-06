@@ -62,6 +62,12 @@ public function validate($key){
             return $this->wrapWarn($this->_message[$key]);
         }
     }
+
+public function wrapWarn($mess){
+        if(!empty($mess)){
+            return "<span class=\"warn\">{$mess}<span>";
+        }
+    }
     
     
 }

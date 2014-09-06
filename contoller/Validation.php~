@@ -56,5 +56,12 @@ public function isEmail($email = null){
         }
         return false;
     }
+
+public function validate($key){
+        if(!empty($this->_errors) && in_array($key, $this->_errors)){
+            return $this->wrapWarn($this->_message[$key]);
+        }
+    }
+    
     
 }
