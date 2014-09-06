@@ -38,6 +38,15 @@ class Validation{
     }
     
     
-    
+     public function process(){
+        if($this->objForm->isPost() && !empty($this->_required)){
+            $this->_post = $this->objForm->getPostArray($this->_expected);
+            if(!empty($this->_post)){
+                foreach ($this->_post as $key => $value){
+                    $this->check($key , $value);
+                }
+            }
+        }
+    }
     
 }
