@@ -104,6 +104,154 @@ if ($objForm->isPost('first_name')) {
 require_once('_header.php');
 
 ?>
+<h1>Login</h1>
+<form action="" method="post">
+    <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+        <tr>
+            <th>
+                <label for="login_email">Login</label> 
+            </th>
+            <td>
+                
+                <input type="text" name="login_email" id="login_email" class="fld" value="" />
+            </td>
+        </tr>
+        
+        <tr>
+            <th>
+                <label for="login_password">Password</label> 
+            </th>
+            <td>
+                <input type="password" name="login_password" id="login_password" class="fld" value="" />
+            </td>
+        </tr>
+        
+        <tr>
+            <th>&#160;</th>
+            <td>
+                <label for="btn_login" class="sbm sbm_blue fl_l">
+                    <input type="submit" id="btn_login" class="btn" value="Login" />
+                </label>
+            </td>
+        </tr>
+    </table>
+</form>
+<div class="dev br_td"></div>
+<h3>Not registered ? </h3>
+<form action="" method="post">
+    <table cellpadding="0" cellspacing="0" border="0" class="tbl_insert">
+        
+        
+        <tr>
+            <th><label for="first_name">First Name *</label></th>
+            <td>
+                
+                <input type="text" name="first_name" id="first_name" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="last_name">Last Name *</label></th>
+            <td>
+                <?php echo $objValid->validate('last_name');?>
+                <input type="text" name="last_name" id="last_name" class="fld" 
+                       value="<?php echo $objForm->stickyText('last_name'); ?>"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="address_1">Address 1 *</label></th>
+            <td>
+                
+                <input type="text" name="address_1" id="address_1" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="address_2">Address 2 *</label></th>
+            <td>
+                
+                <input type="text" name="address_2" id="address_2" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        
+         <tr>
+            <th><label for="town">Town *</label></th>
+            <td>
+                
+                <input type="text" name="town" id="town" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+                
+        <tr>
+            <th><label for="county">County *</label></th>
+            <td>
+                
+                <input type="text" name="county" id="county" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="country">Country *</label></th>
+            <td>
+                
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="post_code">Post Code *</label></th>
+            <td>
+               
+                <input type="text" name="post_code" id="post_code" class="fld" 
+                       value="<?php echo $objForm->stickyText('post_code');?>"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="email">E mail Address *</label></th>
+            <td>
+                
+                <input type="text" name="email" id="email" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="password">Password *</label></th>
+            <td>
+                
+                <input type="password" name="password" id="password" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th><label for="confirm_password">Confirm Password *</label></th>
+            <td>
+                
+                <input type="password" name="confirm_password" id="confirm_password" class="fld" 
+                       value=""/>
+            </td>
+        </tr>
+        
+        <tr>
+            <th>&nbsp;</th>
+            <td>
+                <label for="btn" class="sbm sbm_blue fl_l">
+                <input type="Submit" id="btn" class="btn" value="Register"/>
+                </label>
+            </td>
+        </tr>
+        
+    </table>
+</form>
 
 
 <?php require_once('_footer.php'); ?>
