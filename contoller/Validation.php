@@ -48,5 +48,13 @@ class Validation{
             }
         }
     }
+
+public function isEmail($email = null){
+        if(!empty($email)){
+            $result = filter_var($email, FILTER_VALIDATE_EMAIL);
+            return !$result ? false : true;
+        }
+        return false;
+    }
     
 }
