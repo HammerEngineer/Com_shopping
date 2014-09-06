@@ -30,5 +30,15 @@ class Login{
 			Helper::redirect($url);
 		//}
 	}
+
+ public static function restrictFront(){
+        if(!self::isLogged(self::$_login_front)){
+            $url = Url::cPage() != "logout" ? 
+                 self::$_login_page_front."&".self::$_referer."=".Url::cPage():
+                 self::$_login_page_front;
+            
+         Helper::redirect($url);
+        }
+    } 
 }
 
