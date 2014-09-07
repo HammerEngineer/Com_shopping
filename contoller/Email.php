@@ -72,6 +72,7 @@ class Email{
                 }
 	
 	}
+<<<<<<< HEAD
         
         
         public function fetchEmail($case = null, $array = null) {
@@ -98,6 +99,8 @@ class Email{
 			return "<div style=\"font-family:Arial,Verdana,Sans-serif;font-size:12px;color:#333;line-height:21px;\">{$content}</div>";
 		}
 	}
+=======
+>>>>>>> origin/master
 }
 ?>
 

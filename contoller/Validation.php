@@ -38,7 +38,11 @@ class Validation{
     }
     
     
+<<<<<<< HEAD
     public function process(){
+=======
+     public function process(){
+>>>>>>> origin/master
         if($this->objForm->isPost() && !empty($this->_required)){
             $this->_post = $this->objForm->getPostArray($this->_expected);
             if(!empty($this->_post)){
@@ -48,6 +52,7 @@ class Validation{
             }
         }
     }
+<<<<<<< HEAD
     
     
     public function add2Errors($key){
@@ -81,12 +86,17 @@ class Validation{
     
     
     public function isEmail($email = null){
+=======
+
+public function isEmail($email = null){
+>>>>>>> origin/master
         if(!empty($email)){
             $result = filter_var($email, FILTER_VALIDATE_EMAIL);
             return !$result ? false : true;
         }
         return false;
     }
+<<<<<<< HEAD
     
     
     public function isValid(){
@@ -121,16 +131,29 @@ class Validation{
     
     
     public function validate($key){
+=======
+
+public function validate($key){
+>>>>>>> origin/master
         if(!empty($this->_errors) && in_array($key, $this->_errors)){
             return $this->wrapWarn($this->_message[$key]);
         }
     }
+<<<<<<< HEAD
     
     
     public function wrapWarn($mess){
+=======
+
+public function wrapWarn($mess){
+>>>>>>> origin/master
         if(!empty($mess)){
             return "<span class=\"warn\">{$mess}<span>";
         }
     }
     
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/master
 }

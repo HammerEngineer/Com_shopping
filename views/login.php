@@ -112,7 +112,11 @@ require_once('_header.php');
                 <label for="login_email">Login</label> 
             </th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('login'); ?>
+=======
+                
+>>>>>>> origin/master
                 <input type="text" name="login_email" id="login_email" class="fld" value="" />
             </td>
         </tr>
@@ -145,9 +149,15 @@ require_once('_header.php');
         <tr>
             <th><label for="first_name">First Name *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('first_name');?>
                 <input type="text" name="first_name" id="first_name" class="fld" 
                        value="<?php echo $objForm->stickyText('first_name'); ?>"/>
+=======
+                
+                <input type="text" name="first_name" id="first_name" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
@@ -163,18 +173,30 @@ require_once('_header.php');
         <tr>
             <th><label for="address_1">Address 1 *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('address_1');?>
                 <input type="text" name="address_1" id="address_1" class="fld" 
                        value="<?php echo $objForm->stickyText('address_1'); ?>"/>
+=======
+                
+                <input type="text" name="address_1" id="address_1" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
         <tr>
             <th><label for="address_2">Address 2 *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('address_2');?>
                 <input type="text" name="address_2" id="address_2" class="fld" 
                        value="<?php echo $objForm->stickyText('address_2'); ?>"/>
+=======
+                
+                <input type="text" name="address_2" id="address_2" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
@@ -182,9 +204,15 @@ require_once('_header.php');
          <tr>
             <th><label for="town">Town *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('town');?>
                 <input type="text" name="town" id="town" class="fld" 
                        value="<?php echo $objForm->stickyText('town'); ?>"/>
+=======
+                
+                <input type="text" name="town" id="town" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
@@ -192,24 +220,38 @@ require_once('_header.php');
         <tr>
             <th><label for="county">County *</label></th>
             <td>
+<<<<<<< HEAD
                  <?php echo $objValid->validate('county');?>
                 <input type="text" name="county" id="county" class="fld" 
                        value="<?php echo $objForm->stickyText('county');?>"/>
+=======
+                
+                <input type="text" name="county" id="county" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
         <tr>
             <th><label for="country">Country *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('country');?>
                 <?php echo $objForm->getCountriesSelect(19); ?>
+=======
+                
+>>>>>>> origin/master
             </td>
         </tr>
         
         <tr>
             <th><label for="post_code">Post Code *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('post_code');?>
+=======
+               
+>>>>>>> origin/master
                 <input type="text" name="post_code" id="post_code" class="fld" 
                        value="<?php echo $objForm->stickyText('post_code');?>"/>
             </td>
@@ -218,28 +260,46 @@ require_once('_header.php');
         <tr>
             <th><label for="email">E mail Address *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('email');?>
                 <input type="text" name="email" id="email" class="fld" 
                        value="<?php echo $objForm->stickyText('email');?>"/>
+=======
+                
+                <input type="text" name="email" id="email" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
         <tr>
             <th><label for="password">Password *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('password');?>
                 <?php echo $objValid->validate('password_missmatch');?>
                 <input type="password" name="password" id="password" class="fld" 
                        value="<?php echo $objForm->stickyText('email');?>"/>
+=======
+                
+                <input type="password" name="password" id="password" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
         <tr>
             <th><label for="confirm_password">Confirm Password *</label></th>
             <td>
+<<<<<<< HEAD
                 <?php echo $objValid->validate('confirm_password');?>
                 <input type="password" name="confirm_password" id="confirm_password" class="fld" 
                        value="<?php echo $objForm->stickyText('email');?>"/>
+=======
+                
+                <input type="password" name="confirm_password" id="confirm_password" class="fld" 
+                       value=""/>
+>>>>>>> origin/master
             </td>
         </tr>
         
@@ -255,4 +315,9 @@ require_once('_header.php');
     </table>
 </form>
 
+<<<<<<< HEAD
 <?php require_once('_footer.php'); ?>
+=======
+
+<?php require_once('_footer.php'); ?>
+>>>>>>> origin/master

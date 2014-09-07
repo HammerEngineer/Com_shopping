@@ -1,5 +1,5 @@
 <?php 
-
+require_once('../inc/autoload.php');
 $session = Session::getSession('basket');
 $objBasket = new Basket();
 $out = array();
@@ -16,7 +16,7 @@ require_once('_header.php');
 ?>
 <h1>Basket</h1>
 <?php if(!empty($out)){ ?>
-<div id ="big_basket">
+
     <form action="" method="post" id="frm_basket">
     <table cellpadding="0" cellspacing="0" border="0" class="tbl_repeat">
         <tr>
@@ -28,14 +28,10 @@ require_once('_header.php');
         <?php foreach ($out as $item) { ?>
             <tr>
             <td><?php echo Helper::encodeHTML($item['name']);?></td>
-<<<<<<< HEAD
-            <td><input type="text" name="qty-<?php echo $item['id']; ?>" 
-                      id="qty-<?php echo $item['id'];?>" class="fld_qty"
-                      value="<?php echo $session[$item['id']]['qty'];?>"
-=======
-            <td><input type="text" name="qty-<?php echo $item['id']; ?>" id="qty-{$item['id']}" class="fld_qty"
+            <td><input 
+                type="text" name="qty-<?php echo $item['id']; ?>"
+                id="qty-<?php echo $item['id']; ?>" class="fld_qty"
                 value="<?php echo $session[$item['id']]['qty'];?>"
->>>>>>> origin/master
                 />
             </td>
             <td class="ta_r">&pound;<?php echo number_format($objBasket->itemTotal($item['price'],$session[$item['id']]['qty']), 2);?></td>
@@ -43,7 +39,7 @@ require_once('_header.php');
             
             </tr>
             
-        <?php } ?>
+        <?php }?>
         
         <?php if($objBasket->_vat_rate !=0){?>
         <tr>
@@ -73,16 +69,10 @@ require_once('_header.php');
         </div>
         
         <div class="sbm sbm_blue fl_l update_basket">
-<<<<<<< HEAD
             <span class="btn">Update</span>
-            <!--<input type="submit" class="update_basket" value="update" />-->
-=======
-            <!--<span class="btn">Update</span>-->
-            <input type="submit" class="update_basket" value="update" />
->>>>>>> origin/master
         </div>
     </form>
-</div>
+
 <?php } else { ?>
     <p> Your Basket is currently empty</p>
 <?php } ?>
