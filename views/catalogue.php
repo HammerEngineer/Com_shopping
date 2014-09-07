@@ -12,6 +12,10 @@ if(empty($cat)){
     }  else {
         
         $rows = $objCatalogue->getProducts($cat);
+        //instantiate paging class
+        $objPaging = new Paging($rows , 3);
+        $rows = $objPaging->getRecords();
+        
         require_once("_header.php");
 ?>
 
@@ -57,6 +61,8 @@ if(empty($cat)){
 </div>
 <?php 
         }
+        
+        echo $objPaging->getPaging();
         
     } else{
     
